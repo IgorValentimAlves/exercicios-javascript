@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eleições</h1>
+    <p>Qual sua idade?</p><input type="text" name="idade" id="idade">
+    <input type="button" value="Verificar" onclick="Calcular()">
+    <div id="res"></div>
+
+    <script>
+        function Calcular() {
+            var idade = window.document.querySelector('input#idade')
+            var res = window.document.querySelector('div#res')
+            var idadevoto = Number (idade.value)
+
+            if (idadevoto < 16) {
+                res.innerHTML = 'Não pode votar.'
+            } else if (idadevoto >= 16 && idadevoto < 18) {
+                res.innerHTML = 'Voto opcional.'
+            }
+            
+            if (idadevoto >= 18) {
+                res.innerHTML = 'Voto obrigatório!'
+            }
+            
+        }
+    </script>
+</body>
+</html>

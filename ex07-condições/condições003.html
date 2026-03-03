@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+
+    <p>Você é Brasileiro?</p>
+
+    <input type="radio" name="sim" id="sim">
+    <label for="sim">Sim</label>
+    <input type="radio" name="nao" id="nao">
+    <label for="nao">Não</label>
+
+    <input type="button" value="verificar" onclick="Click()">
+
+    <div id="res"></div>
+
+    <script>
+
+        function Click() {
+            var sim = window.document.querySelector('input#sim')
+
+            var nao = window.document.querySelector('input#nao')
+
+            var res = window.document.querySelector('div#res') 
+
+            if (sim.checked) {
+                res.innerHTML = 'Brasileiro'
+            } else if (nao.checked) {
+                res.innerHTML = 'Estrangeiro'
+            } else {
+                res.innerHTML = 'Selecione uma opção.'
+                return
+            }
+
+            sim.checked = false
+            nao.checked = false
+        }
+
+    </script>
+
+</body>
+</html>

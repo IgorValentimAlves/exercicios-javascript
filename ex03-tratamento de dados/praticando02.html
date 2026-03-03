@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var nome = window.prompt('Qual o seu nome?')
+
+        document.write(`Olá ${nome}! <br/>`)
+        document.write(`Seu nome em máiusculas é ${nome.toLocaleUpperCase()}. <br/>`)
+        document.write(`Em minúsculas é ${nome.toLocaleLowerCase()}. <br/>`)
+        document.write(`E tem ${nome.length} letras. <br/>`)
+
+        var salario = Number(window.prompt('Qual o seu salário?')) //convertendo o prompt para number, pois ele é naturalmente uma string
+
+        document.write(`Seu salário em reais é ${salario.toLocaleString('pt-BR',{style: 'currency',currency:'BRL'})} <br/>`)
+
+        document.write(`com duas casas decimais ${salario.toFixed(2)}`)
+        
+    </script>
+
+</body>
+</html>

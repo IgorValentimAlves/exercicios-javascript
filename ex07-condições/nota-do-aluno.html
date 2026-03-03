@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota do Aluno</title>
+</head>
+<body>
+    <h1>Nota do Aluno</h1>
+    
+    <input type="text" name="nota" id="nota">
+    <input type="button" value="verificar" onclick="Click()">
+    <div id="res"></div>
+
+    <script>
+
+        function Click() {
+
+            var nota = window.document.querySelector('input#nota')
+            var notaprova = Number(nota.value)
+            var res = window.document.querySelector('div#res')
+            
+            if (notaprova < 5) {
+                res.innerHTML = `<p>Você tirou nota <strong>${notaprova}</strong>. <br>Está Reprovado!</p>`
+
+            } else if (notaprova >= 5 && notaprova <7) {
+                res.innerHTML = `<p>Você tirou nota <strong>${notaprova}.</strong> <br> Está de Recuperação.</p>`
+            } 
+
+            if (notaprova >= 7 && notaprova <10) {
+                res.innerHTML = `<p>Você tirou nota <strong>${notaprova}.</strong> <br> Está Aprovado</p>`
+
+            } else if (notaprova == 10) {
+            res.innerHTML = `<p>Você tirou nota <strong>${notaprova}.</strong> <br> PARABÊNS! <br>Está APROVADO!</p>`
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
